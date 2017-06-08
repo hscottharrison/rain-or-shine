@@ -1,0 +1,4 @@
+<input type="text" placeholder="city" ng-model='city' />
+<input type="text" placeholder="state abbreviation" ng-model='state' />
+
+<button ui-sref="home({city: city, state: state})" ng-click="getWeather(city, state)">Submit</button>

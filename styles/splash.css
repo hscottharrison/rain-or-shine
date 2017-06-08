@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+}
+.splashContainer{
+  height: 100vh;
+  width: 100%;
+  background: url('../images/splash.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+.splashHeader{
+  height: 10%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.splashLogo{
+  font-size: 30px;
+
+
+}
+.input-wrapper{
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
