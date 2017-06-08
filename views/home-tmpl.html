@@ -1,2 +1,44 @@
-<h1>This is the home page!</h1>
-{{test}}
+  <nav class="main-nav">
+    <h3 class='splashLogo'>Rain Or Shine</h3>
+
+    <div>
+      <input placeholder="city" ng-model="city" />
+      <input placeholder="state" ng-model='state' />
+      <button ui-sref='home({state: state, city: city})'>Submit</button>
+    </div>
+  </nav>
+  <main>
+    <section class='left'>
+      <div class="currentweather">
+        <div id="weather">
+          <img src='{{icon}}' /><br />
+          Weather for {{location}}<br />
+          Current Weather: {{weather}}<br />
+          Current Temperature: {{temp}}<br />
+          Feels Like: {{feelslike}}<br />
+          Winds: {{wind}}<br />
+          {{observation_time}}
+        </div>
+      </div>
+      <div class="currentconditions">  </div>
+      <div class="compare">  </div>
+    </section>
+    <section class='right'>
+      <div class="hourly">
+        <li class='hourlylist' ng-repeat="hourly in hourlys">
+          {{hourly.time}}
+          <img src="{{hourly.icon}}" />
+          {{hourly.temp}}°
+        </li>
+     </div>
+        <div class="hourly">
+          <li class='hourlylist' ng-repeat="weekly in weeklys">
+            {{weekly.weekday}}<br /> {{weekly.month}} {{weekly.day}}
+            <img src="{{weekly.icon}}" />
+            High: {{weekly.high}}°
+            Low: {{weekly.low}}°
+          </li>
+      </div>
+      <img class="radar" ng-src="{{radar}}" alt="">
+    </section>
+  </main>

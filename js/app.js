@@ -1,4 +1,4 @@
-angular.module('rainOrShine', ['ui.router'])
+angular.module('rainOrShine', ['ui.router', 'ngMaterial'])
   .config(function($stateProvider, $urlRouterProvider) {
     /* Set home route */
     $urlRouterProvider.otherwise('/');

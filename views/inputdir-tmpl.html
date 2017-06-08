@@ -1,4 +1,23 @@
-<input type="text" placeholder="city" ng-model='city' />
-<input type="text" placeholder="state abbreviation" ng-model='state' />
+<!-- <input type="text" placeholder="city" ng-model='city' />
+<input type="text" placeholder="state abbreviation" ng-model='state' /> -->
 
-<button ui-sref="home({city: city, state: state})" ng-click="getWeather(city, state)">Submit</button>
+
+
+
+
+
+        <div class="dir-wrap" layout-gt-sm="row">
+          <md-input-container class='md-input-container'  flex-gt-sm>
+            <label class='label'>City</label>
+            <input ng-model="city">
+          </md-input-container>
+          <md-input-container  class='md-input-container' flex-gt-sm>
+            <label class='label'>State</label>
+            <md-select ng-model="state">
+              <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                {{state.abbrev}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <button class="splash-button" ui-sref="home({city: city, state: state})" >Submit</button>
+        </div>

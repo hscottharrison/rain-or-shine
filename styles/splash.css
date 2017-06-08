@@ -19,8 +19,12 @@
 }
 .splashLogo{
   font-size: 30px;
-
-
+}
+.md-input-container{
+  margin-right: 10px;
+}
+.label{
+  color: #fff;
 }
 .input-wrapper{
   height: 70%;
@@ -28,4 +32,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.splash-button{
+  height: 30px;
 }
