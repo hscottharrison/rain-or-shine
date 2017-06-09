@@ -39,10 +39,6 @@
           {{hourly.temp}}°
         </li>
      </div>
-     <div>
-       <i class="fa fa-arrow-left" aria-hidden="true"></i>
-       <i class="fa fa-arrow-right" aria-hidden="true"></i>
-     </div>
        <h1 class='scroll-label'>Daily</h1>
         <div class="hourly">
           <li class='hourlylist' ng-repeat="weekly in weeklys">
@@ -52,11 +48,7 @@
             Low: {{weekly.low}}°
           </li>
       </div>
-      <div>
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      </div>
-
+      
       <img class="radar" ng-src="{{radar}}" alt="">
     </section>
   </main>

@@ -41,12 +41,7 @@
   align-items: center;
   flex-direction: column;
 }
-/*md-input-container label{
-  color: #fff;
-}
-md-input-container input{
-  color: #fff;
-}*/
+
 .input-list{
   display: inline;
 }

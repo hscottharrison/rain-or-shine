@@ -14,15 +14,13 @@
   padding-right: 30px;
 }
 
-
-
 main{
   display: flex;
   flex-direction: row;
 
 }
 main section{
-  height: calc(100vh);
+  height: 100vh;
 
 }
 .left{
@@ -87,9 +85,10 @@ main section{
 .hourly{
   display: flex;
   flex-direction: row;
-  max-height: 20%;
+  min-height: 20%;
   max-width: 60%;
   overflow-y: scroll;
+  margin-bottom: 20px
 }
 .hourly li{
   list-style-type: none;
@@ -100,14 +99,4 @@ main section{
 .radar{
   width: 60%;
   height: 40%;
-}
-.fa{
-  margin-top: 0;
-}
-.fa-arrow-left{
-  float: left;
-  margin-right: 20px;
-}
-.fa-arrow-right{
-  float: right;
 }
