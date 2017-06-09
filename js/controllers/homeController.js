@@ -4,7 +4,7 @@ weatherService.getWeather($stateParams.state, $stateParams.city)
     .then(function(response){
       var results = response;
       $scope.location = results.display_location.full;
-      $scope.temp = results.temperature_string;
+      $scope.temp = results.temp_f;
       $scope.weather = results.weather;
       $scope.wind = results.wind_string;
       $scope.observation_time = results.observation_time;

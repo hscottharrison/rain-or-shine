@@ -10,20 +10,30 @@
   <main>
     <section class='left'>
       <div class="currentweather">
-        <div id="weather">
-          <img src='{{icon}}' /><br />
-          Weather for {{location}}<br />
-          Current Weather: {{weather}}<br />
-          Current Temperature: {{temp}}<br />
-          Feels Like: {{feelslike}}<br />
-          Winds: {{wind}}<br />
+        <h1>{{location}}</h1>
+        <div class='large-display'>
+          <h1 class='current-temp'>{{temp}}</h1>
+          <img class='current-icon'src='{{icon}}' />
+        </div>
+        <div class='condit-desc'>
+          <h4>{{weather}}</h4>
+        </div>
+        <div class='small-display-wrapper'>
+          <div class='small-display'>
+            <h3>Wind</h3>
+            <h5>{{wind}}</h5>
+          </div>
+          <div class='small-display feelslike'>
+            <h3>Feels Like</h3>
+            <h5>{{feelslike}}</h5>
+          </div>
+        </div>
           {{observation_time}}
         </div>
-      </div>
-      <div class="currentconditions">  </div>
       <div class="compare">  </div>
     </section>
     <section class='right'>
+        <h1>Hourly</h1>
       <div class="hourly">
         <li class='hourlylist' ng-repeat="hourly in hourlys">
           {{hourly.time}}
@@ -31,6 +41,7 @@
           {{hourly.temp}}°
         </li>
      </div>
+       <h1>Daily</h1>
         <div class="hourly">
           <li class='hourlylist' ng-repeat="weekly in weeklys">
             {{weekly.weekday}}<br /> {{weekly.month}} {{weekly.day}}

@@ -20,8 +20,15 @@
 .splashLogo{
   font-size: 30px;
 }
+.div-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .md-input-container{
   margin-right: 10px;
+  color: #fff;
 }
 .label{
   color: #fff;

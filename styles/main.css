@@ -1,8 +1,7 @@
 .main-nav{
   box-sizing: border-box;
-  height: 75px;
+  height: 90px;
   width: 100%;
-  background-color: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,40 +13,65 @@ main{
   flex-direction: row;
 }
 main section{
-  height: calc(100vh - 75px)
+  height: calc(100vh - 90px)
 }
 .left{
   flex: 1;
-  background-color: red;
-}
-.right{
-  flex: 1.5;
-  margin-left: 60px;
-  background-color: purple;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  margin-top: 20px;
 }
 .currentweather{
-  min-height: 40%;
-  background-color: green;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 300px;
+}
+.large-display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.current-temp{
+  font-size: 70px;
+}
+.current-icon{
+  height: 70px;
+  width: 70px;
+}
+.condit-desc{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.small-display-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#weather{
-  background-color: blue;
-  width: 90%;
-  min-height: 90%;
+.small-display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.currentconditions{
-  min-height: 40%;
-  background-color: yellow;
+.feelslike{
+  margin-left: 20px;
+}
+.right{
+  flex: 1;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .compare{
   min-height: 20%;
-  background-color: orange;
 }
 .hourly{
   display: flex;
