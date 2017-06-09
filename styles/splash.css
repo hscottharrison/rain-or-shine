@@ -1,12 +1,13 @@
 *{
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 .splashContainer{
   height: 100vh;
   width: 100%;
   background: url('../images/splash.jpg') no-repeat center center;
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
+
   color: #fff;
 }
 .splashHeader{
@@ -40,7 +41,36 @@
   align-items: center;
   flex-direction: column;
 }
+/*md-input-container label{
+  color: #fff;
+}
+md-input-container input{
+  color: #fff;
+}*/
+.input-list{
+  display: inline;
+}
+.style-4 input[type="text"] {
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: solid 2px #c9c9c9;
+  color: #fff;
+
+}
+input::placeholder{
+  color: white;
+}
+input:focus{
+  outline-width: 0;
+}
 
 .splash-button{
-  height: 30px;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  margin-left: 10px;
 }

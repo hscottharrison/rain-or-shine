@@ -1,12 +1,10 @@
-  <nav class="main-nav">
-    <h3 class='splashLogo'>Rain Or Shine</h3>
-
-    <div>
-      <input placeholder="city" ng-model="city" />
-      <input placeholder="state" ng-model='state' />
-      <button ui-sref='home({state: state, city: city})'>Submit</button>
-    </div>
-  </nav>
+<div class='main-wrapper'>
+<nav class="main-nav">
+  <h3 class='splashLogo'>Rain Or Shine</h3>
+  <div>
+      <input-dir></input-dir>
+  </div>
+</nav>
   <main>
     <section class='left'>
       <div class="currentweather">
@@ -21,7 +19,7 @@
         <div class='small-display-wrapper'>
           <div class='small-display'>
             <h3>Wind</h3>
-            <h5>{{wind}}</h5>
+            <h5 class='wind_string'>{{wind}} MPH</h5>
           </div>
           <div class='small-display feelslike'>
             <h3>Feels Like</h3>
@@ -33,7 +31,7 @@
       <div class="compare">  </div>
     </section>
     <section class='right'>
-        <h1>Hourly</h1>
+        <h1 class='scroll-label'>Hourly</h1>
       <div class="hourly">
         <li class='hourlylist' ng-repeat="hourly in hourlys">
           {{hourly.time}}
@@ -41,7 +39,11 @@
           {{hourly.temp}}°
         </li>
      </div>
-       <h1>Daily</h1>
+     <div>
+       <i class="fa fa-arrow-left" aria-hidden="true"></i>
+       <i class="fa fa-arrow-right" aria-hidden="true"></i>
+     </div>
+       <h1 class='scroll-label'>Daily</h1>
         <div class="hourly">
           <li class='hourlylist' ng-repeat="weekly in weeklys">
             {{weekly.weekday}}<br /> {{weekly.month}} {{weekly.day}}
@@ -50,6 +52,12 @@
             Low: {{weekly.low}}°
           </li>
       </div>
+      <div>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </div>
+
       <img class="radar" ng-src="{{radar}}" alt="">
     </section>
   </main>
+</div>

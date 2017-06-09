@@ -6,7 +6,7 @@ weatherService.getWeather($stateParams.state, $stateParams.city)
       $scope.location = results.display_location.full;
       $scope.temp = results.temp_f;
       $scope.weather = results.weather;
-      $scope.wind = results.wind_string;
+      $scope.wind = results.wind_mph;
       $scope.observation_time = results.observation_time;
       $scope.feelslike = results.feelslike_string;
       $scope.icon = results.icon_url;
