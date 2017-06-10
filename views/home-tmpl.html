@@ -28,7 +28,9 @@
         </div>
           {{observation_time}}
         </div>
-      <div class="compare">  </div>
+      <div class="compare">
+        <a ui-sref='compare'>Compare</a>
+      </div>
     </section>
     <section class='right'>
         <h1 class='scroll-label'>Hourly</h1>
@@ -48,7 +50,7 @@
             Low: {{weekly.low}}°
           </li>
       </div>
-      
+
       <img class="radar" ng-src="{{radar}}" alt="">
     </section>
   </main>

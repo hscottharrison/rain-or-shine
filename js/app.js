@@ -21,7 +21,10 @@ angular.module('rainOrShine', ['ui.router', 'ngMaterial'])
         templateUrl: '../views/splash.html',
         controller: function($scope, $state) {
           console.log('splash');
-
         }
-      });
+      })
+      .state('compare',{
+        url: '/compare',
+        templateUrl: '../views/compare.html'
+      })
   });
