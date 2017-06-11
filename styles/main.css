@@ -46,8 +46,8 @@ main section{
   font-size: 70px;
 }
 .current-icon{
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  width: 100px;
 }
 .condit-desc{
   display: flex;
@@ -70,6 +70,11 @@ main section{
 
 .feelslike{
   margin-left: 20px;
+}
+.other-info{
+  margin-top: 20px;
+  margin-left: 20px;
+
 }
 .right{
   flex: 1;
@@ -95,6 +100,10 @@ main section{
   margin-right: 10px;
   text-align: center;
   font-size: 15px;
+}
+.hourly-icon{
+  height: 55px;
+  width: 55px;
 }
 .radar{
   width: 60%;

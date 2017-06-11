@@ -1,0 +1,8 @@
+<div class="hourly compare-wk">
+  <li class='hourlylist compare-wk-list' ng-repeat="weekly in weeklys">
+    {{weekly.weekday}}<br /> {{weekly.month}} {{weekly.day}}
+    <img class = 'hourly-icon' src="{{weekly.icon}}" />
+    High: {{weekly.high}}°
+    Low: {{weekly.low}}°
+  </li>
+</div>

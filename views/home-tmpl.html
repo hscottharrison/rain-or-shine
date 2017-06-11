@@ -28,6 +28,12 @@
         </div>
           {{observation_time}}
         </div>
+        <div class='other-info'>
+          <h3>Observation Location:<h3><h4>{{observation_location}}</h4> <br />
+          <h3>Coordinates:</h3><h4>{{latitude}}, {{longitude}}</h4><br />
+          <h3>Humidity:</h3><h4>{{humidity}}</h4><br />
+          <h3>Wind Gusts:</h3><h4> {{wind_gust}}MPH</h4>
+        </div>
       <div class="compare">
         <a ui-sref='compare'>Compare</a>
       </div>
@@ -37,7 +43,7 @@
       <div class="hourly">
         <li class='hourlylist' ng-repeat="hourly in hourlys">
           {{hourly.time}}
-          <img src="{{hourly.icon}}" />
+          <img class = 'hourly-icon' src="{{hourly.icon}}" />
           {{hourly.temp}}°
         </li>
      </div>
@@ -45,7 +51,7 @@
         <div class="hourly">
           <li class='hourlylist' ng-repeat="weekly in weeklys">
             {{weekly.weekday}}<br /> {{weekly.month}} {{weekly.day}}
-            <img src="{{weekly.icon}}" />
+            <img class = 'hourly-icon' src="{{weekly.icon}}" />
             High: {{weekly.high}}°
             Low: {{weekly.low}}°
           </li>
