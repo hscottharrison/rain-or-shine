@@ -28,11 +28,15 @@
         </div>
           {{observation_time}}
         </div>
+
         <div class='other-info'>
-          <h3>Observation Location:<h3><h4>{{observation_location}}</h4> <br />
-          <h3>Coordinates:</h3><h4>{{latitude}}, {{longitude}}</h4><br />
-          <h3>Humidity:</h3><h4>{{humidity}}</h4><br />
-          <h3>Wind Gusts:</h3><h4> {{wind_gust}}MPH</h4>
+          <h2>Additional Information</h2>
+          <div class='info-wrapper'>
+            <h3>Observation Location<h3><h5>{{observation_location}}</h5> <br />
+            <h3>Coordinates</h3><h5>{{latitude}}, {{longitude}}</h5><br />
+            <h3>Humidity</h3><h5>{{humidity}}</h5><br />
+            <h3>Wind Gusts</h3><h5> {{wind_gust}}MPH</h5>
+          </div>
         </div>
       <div class="compare">
         <a ui-sref='compare'>Compare</a>

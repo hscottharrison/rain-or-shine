@@ -4,13 +4,40 @@
   </header>
   <div class='compare-wrapper'>
     <div class='left compare-box'>
-      <compare-input-dir></compare-input-dir>
-      <current-conditions-dir></current-conditions-dir>
-      <weekly-dir></weekly-dir>
+      <compare-input-dir
+        searching="searching1"
+        get-weekly="getWeekly(state, city)"
+        get-weather="getWeather(state, city)"
+        display-weather="displayWeather(response, scope)"
+        display-weekly="displayWeekly(response, scope)"
+        weeklys="weekly1"
+        weather="weather1"
+      ></compare-input-dir>
+      <current-conditions-dir
+        searching="searching1"
+        weather="weather1"
+      ></current-conditions-dir>
+      <weekly-dir
+        weeklys="weekly1"
+      ></weekly-dir>
     </div>
     <div class='right compare-box'>
-      <!-- <compare-input-dir city='city' state='state'></compare-input-dir>
-      <current-conditions-dir></current-conditions-dir> -->
+      <compare-input-dir
+        searching="searching2"
+        get-weekly="getWeekly(state, city)"
+        get-weather="getWeather(state, city)"
+        display-weather="displayWeather(response, scope)"
+        display-weekly="displayWeekly(response, scope)"
+        weeklys="weekly2"
+        weather="weather2"
+      ></compare-input-dir>
+      <current-conditions-dir
+        searching="searching2"
+        weather="weather2"
+      ></current-conditions-dir>
+      <weekly-dir
+        weeklys="weekly2"
+      ></weekly-dir>
     </div>
   </div>
 </div>

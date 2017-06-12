@@ -1,7 +1,7 @@
 angular.module('rainOrShine').service('weatherService', function($http){
 
   this.getWeather = function(state, city){
-    return $http.get('http://api.wunderground.com/api/7bd6e5a7f2af93d2/conditions/q/' + state + '/' + city + '.json')
+    return $http.get('http://api.wunderground.com/api/128843a09c4e651f/conditions/q/' + state + '/' + city + '.json')
     .then(function(response){
 
       return response.data.current_observation;
@@ -9,11 +9,11 @@ angular.module('rainOrShine').service('weatherService', function($http){
   }
 
   this.getHourly = function(state, city){
-    return $http.get('http://api.wunderground.com/api/7bd6e5a7f2af93d2/hourly/q/' + state + '/' + city + '.json')
+    return $http.get('http://api.wunderground.com/api/128843a09c4e651f/hourly/q/' + state + '/' + city + '.json')
     .then(function(response){
 
       var results = response.data.hourly_forecast
-      console.log(results);
+
       var hourlyArr = [];
       for(var i = 0; i <= 12; i++){
         var hourlyObj = {
@@ -28,11 +28,12 @@ angular.module('rainOrShine').service('weatherService', function($http){
       return hourlyArr;
     })
   }
+
   this.getWeekly = function(state, city){
-    return $http.get('http://api.wunderground.com/api/7bd6e5a7f2af93d2/forecast10day/q/' + state + '/' + city + '.json')
+    return $http.get('http://api.wunderground.com/api/128843a09c4e651f/forecast10day/q/' + state + '/' + city + '.json')
     .then(function(response){
       var wkResults = response.data.forecast.simpleforecast.forecastday;
-      console.log(wkResults)
+
       var wkArr = [];
       for(var i = 0; i < wkResults.length; i++){
         var wkObj = {
@@ -49,6 +50,7 @@ angular.module('rainOrShine').service('weatherService', function($http){
       return wkArr;
     })
   }
+  
   this.getRadar = function(state, city){
     return $http.get('')
     .then(function(response){

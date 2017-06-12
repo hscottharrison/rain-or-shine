@@ -25,6 +25,7 @@ angular.module('rainOrShine', ['ui.router', 'ngMaterial'])
       })
       .state('compare',{
         url: '/compare',
-        templateUrl: '../views/compare.html'
+        templateUrl: '../views/compare.html',
+        controller: 'homeCtrl'
       })
   });

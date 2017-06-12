@@ -1,3 +1,6 @@
+*{
+  margin: 0;
+}
 .compare-container{
   height: 100vh;
   width: 100%;
@@ -31,6 +34,7 @@
 .compare-wk-list{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
   padding-bottom: 30px;
