@@ -18,7 +18,30 @@ angular.module('rainOrShine').controller('compareDirCtrl', function($scope, weat
         $scope.elevation = results.observation_location.elevation;
         $scope.humidity = results.relative_humidity;
         $scope.wind_gust = results.wind_gust_mph;
-
+        if(weather == 'Clear' || weather == 'Sunny'){
+          $scope.icon = '../../images/sun.png';
+        }
+        else if(weather == 'Clear' || weather == 'Sunny' && hours() > 21){
+          $scope.icon = '../../images/moon.png';
+        }
+        else if(weather == 'Scattered Clouds' || weather == 'Partly Sunny' || weather == 'Partly Cloudy' || weather == 'Mostly Sunny' || weather == 'Mostly Cloudy' && hours() < 21){
+          $scope.icon = '../../images/sun_cloud.png';
+        }
+        else if(weather == 'Scattered Clouds' || weather == 'Partly Sunny' || weather == 'Partly Cloudy' || weather == 'Mostly Sunny' || weather == 'Mostly Cloudy' && hours() > 21){
+          $scope.icon = '../../images/moon_cloud.png';
+        }
+        else if(weather == 'Cloudy' || weather == 'Overcast'){
+          $scope.icon = '../../images/cloud.png';
+        }
+        else if(weather == 'Flurries' || weather == 'Freezing Rain' || weather == 'Sleet' || weather == 'Snow'){
+          $scope.icon = '../../images/snow.png';
+        }
+        else if(weather == 'Rain'){
+          $scope.icon = '../../images/rain.png';
+        }
+        else if(weather == 'Thunderstorms' || weather == 'Thunderstorm' || weather == 'Chance of a Thunderstorm'){
+          $scope.icon = '../../images/thunderstorm.png';
+        }
       })
   }
   $scope.getWkCompare = function(state, city){
