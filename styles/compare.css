@@ -2,12 +2,13 @@
   margin: 0;
 }
 .compare-container{
-  height: 100vh;
+  height: calc(100vh + 100px);
   width: 100%;
   background: url(../images/main6.jpg) center center fixed;
   align-items: center;
   box-sizing: border-box;
   color: white;
+  text-align: center;
 }
 .comparelogo{
   color: white;

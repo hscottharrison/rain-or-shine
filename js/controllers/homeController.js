@@ -14,7 +14,7 @@ angular.module('rainOrShine').controller('homeCtrl', function($scope, weatherSer
   $scope.weekly2 = {};
   $scope.searching = false;
 
-  
+
 
 
   $scope.getWeather = function(state, city) {
@@ -123,7 +123,7 @@ angular.module('rainOrShine').controller('homeCtrl', function($scope, weatherSer
         else if(response[i].condition == 'Flurries' || response[i].condition == 'Freezing Rain' || response[i].condition == 'Sleet' || response[i].condition == 'Snow'){
           response[i].icon = '../../images/snow.png';
         }
-        else if(response[i].condition == 'Rain'){
+        else if(response[i].condition == 'Rain' || response[i].condition == 'Chance of Rain'){
           response[i].icon = '../../images/rain.png';
         }
         else if(response[i].condition == 'Thunderstorms' || response[i].condition == 'Thunderstorm' || response[i].condition == 'Chance of a Thunderstorm'){
