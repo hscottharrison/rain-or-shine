@@ -12,6 +12,9 @@ angular.module('rainOrShine').controller('homeCtrl', function($scope, weatherSer
   $scope.weekly1 = {};
   $scope.weather2 = {};
   $scope.weekly2 = {};
+  $scope.searching = false;
+
+  
 
 
   $scope.getWeather = function(state, city) {
@@ -45,11 +48,11 @@ angular.module('rainOrShine').controller('homeCtrl', function($scope, weatherSer
       scope.elevation = results.observation_location.elevation;
       scope.humidity = results.relative_humidity;
       scope.wind_gust = results.wind_gust_mph;
-      if(weather == 'Clear' || weather == 'Sunny'){
-        scope.icon = '../../images/sun.png';
-      }
-      else if(weather == 'Clear' || weather == 'Sunny' && hours() >= 20){
+      if(weather == 'Clear' && hours() >= 20){
         scope.icon = '../../images/moon.png';
+      }
+      else if(weather == 'Clear' || weather == 'Sunny'){
+        scope.icon = '../../images/sun.png';
       }
       else if(weather == 'Scattered Clouds' || weather == 'Partly Sunny' || weather == 'Partly Cloudy' || weather == 'Mostly Sunny' || weather == 'Mostly Cloudy' && hours() < 21){
         scope.icon = '../../images/sun_cloud.png';
@@ -77,7 +80,7 @@ angular.module('rainOrShine').controller('homeCtrl', function($scope, weatherSer
     .then(function(response){
       console.log(response)
       for(var i = 0; i < response.length; i++){
-        if(response[i].condition == 'Clear' && response[i].hour > '19'){
+        if(response[i].condition == 'Clear' && (response[i].hour > '19' || response[i].hour < '6')){
           console.log('is this logging?');
           response[i].icon = '../../images/moon.png';
         }
