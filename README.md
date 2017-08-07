@@ -16,4 +16,4 @@ After entering in a location, the user is taken to a dashboard that displays all
 
 The user also has the option to compare a forecast for two different places. Upon clicking a link in the dashboard to compare weather, they are taken to a page where they can enter in two places to see a current forecast as well as a 10-day forecast for each place.
 
-![Compare](https://www.linkedin.com/in/hunterscottharrison/detail/treasury/position:1044765074/?entityUrn=urn%3Ali%3Afs_treasuryMedia%3A(ACoAABD1SZ0BSijImX6K-DKRll95Pwse1IBq2aw%2C1501425293381 "Compare")
+![Compare](https://media.licdn.com/media-proxy/ext?w=800&h=800&f=n&hash=wOdICUWWtlB4FAAR4XtAveDi%2BsM%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0Vinkhwfjw8177yE41y87UNCVordEGXyD3u0qYrdfybpLZONereluVhDeCoclANhefL5SDmzD5ToIo3seNpz3ZCzIo24ZxUBbFImi24 "Compare")
